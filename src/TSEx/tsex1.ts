@@ -1,4 +1,4 @@
-function log(a){
+function log(a:String){
     console.log(a);
 }
 
