@@ -1,1 +1,8 @@
 <p>siv-detail works!</p>
+<br>
+
+<div *ngIf="siv">
+    <h2>{{siv.PlateNumber}} has used {{siv.Quantity}} of {{siv.ItemName}}</h2>
+
+    <input [(ngModel)]="siv.PlateNumber" placeholder="Choosen SIV Name">
+</div>

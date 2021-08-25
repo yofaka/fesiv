@@ -32,8 +32,7 @@
 
 </ul>
 
-<div *ngIf="choosenSIV">
-    <h2>{{choosenSIV.PlateNumber}} has used {{choosenSIV.Quantity}} of {{choosenSIV.ItemName}}</h2>
 
-    <input [(ngModel)]="choosenSIV.PlateNumber" placeholder="Choosen SIV Name">
-</div>
+<app-siv-detail [siv]="choosenSIV"></app-siv-detail>
+
+

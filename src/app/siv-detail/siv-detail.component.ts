@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {SIV} from './../siv';
+
+import { Component, OnInit, Input } from '@angular/core';
+ 
+
+
 
 @Component({
   selector: 'app-siv-detail',
@@ -7,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SivDetailComponent implements OnInit {
 
+  @Input() siv: SIV | undefined;
   constructor() { }
 
   ngOnInit(): void {
