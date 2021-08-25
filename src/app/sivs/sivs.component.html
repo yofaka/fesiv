@@ -1,0 +1,39 @@
+
+<br><br>
+
+<b>Plate Number</b> : {{singlesiv.PlateNumber}}
+<br>
+<b>Item Name</b> : {{singlesiv.ItemName}}
+
+<hr>
+
+<fieldset>
+    <legend> SIV Data </legend>
+
+    <label>Plate Number</label>
+    <input [(ngModel)]="singlesiv.PlateNumber" placeholder="Plate Number">
+
+</fieldset>
+
+<hr>
+
+<ul class="sivs">
+
+<li *ngFor="let SIVEntry of SIVEntries"
+    [class.selected]="SIVEntry === choosenSIV"
+    (click)="onChoose(SIVEntry)">
+    <span class="badge">
+        {{SIVEntry.PlateNumber}}
+    </span>
+
+    {{SIVEntry.ItemName}}
+
+</li>
+
+</ul>
+
+<div *ngIf="choosenSIV">
+    <h2>{{choosenSIV.PlateNumber}} has used {{choosenSIV.Quantity}} of {{choosenSIV.ItemName}}</h2>
+
+    <input [(ngModel)]="choosenSIV.PlateNumber" placeholder="Choosen SIV Name">
+</div>
